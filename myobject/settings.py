@@ -25,7 +25,7 @@ SECRET_KEY = '-n$$%s*6esn$o5&t*b!^$_=l#$ir(!u7ak9xhi6b9dz8iz5e-%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['medberwebapp.herokuapp.com']
+ALLOWED_HOSTS = ['medberwebapp.herokuapp.com','127.0.0.1']
 
 
 # Application definition
