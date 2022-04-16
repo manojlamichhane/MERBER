@@ -21,7 +21,7 @@ from web.views import orderhome
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
-    path('',include('web.urls')), #Access the front page to order by default
+    path('index/',include('web.urls')), #Access the front page to order by default
     path('order/',orderhome.login),
     #path('order/',orderhome.index),
     
