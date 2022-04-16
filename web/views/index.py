@@ -34,10 +34,10 @@ def index(request):
     request.session['total_money'] = total_money 
     
 
-    return render(request,"Web/index.html",context)
+    return render(request,"Web/index/index.html",context)
 def webindex(request):
     ''' Ordering System Homepage'''
-    return render(request,"Web/index.html")
+    return render(request,"Web/index/index.html")
 def login(request):
     '''load the login form'''
     return render(request,"web/login.html")
