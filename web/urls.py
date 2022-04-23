@@ -8,7 +8,7 @@ from web.views import cart
 
 urlpatterns = [
     path('', index.index,name="web_index"),
-    path('order', orderhome.index,name="orders_homepage"),
+    # path('order', orderhome.index,name="orders_homepage"),
 
     #The routes of The front-end  logs in /out
     path('login', orderhome.login,name="web_orderhome_login"),#loading the login form
