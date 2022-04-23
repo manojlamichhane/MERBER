@@ -45,7 +45,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{% url 'web_index'%}">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> <span style="font-weight:bold;">（Medber）</span><span style="font-size:14px;">（Montreal）</span></a>
             <div style="display: flex;flex-direction: row;align-items: center;justify-content: flex-end;">
             <a class="navbar-brand" href="login"><span >Login/signup</span></a>
@@ -186,7 +186,7 @@
                 alert("Order added successfully！");
                 window.location.href = "{% url 'web_index' %}";
               }else{
-                alert("Order processing failure！");
+                alert("Order processing failure！You are logged out login first");
               }
             }
           });

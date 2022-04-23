@@ -1,9 +1,10 @@
 #The child route of the web management system
 from django.urls import path,include
 from myadmin.views import registration
-from web.views import index,cart
+from web.views import index
 from web.views import orders
 from web.views import orderhome
+from web.views import cart
 
 urlpatterns = [
     path('', index.index,name="web_index"),
@@ -36,6 +37,5 @@ urlpatterns = [
     path("order/",include([
         path('order', orderhome.webindex,name="web_orders_homepage"),
       ]))
-
-      
+     
 ]
