@@ -14,7 +14,9 @@ class User(models.Model):
     create_at = models.DateTimeField(default=datetime.now)    #creat time
     update_at = models.DateTimeField(default=datetime.now)    #update time
 
-    
+    def __str__(self) -> str:
+        return self.username
+
     def toDict(self):
         return {'id':self.id,'username':self.username,'nickname':self.nickname,'passwor':self.password,'email':self.email,'address':self.address,'phoneNo':self.phoneNo,'status':self.status,'create_at':self.create_at.strftime('%Y-%m-%d %H:%M:%S'),'update_at':self.update_at.strftime('%Y-%m-%d %H:%M:%S'),} 
     class Meta:
@@ -27,6 +29,9 @@ class Category(models.Model):
     status = models.IntegerField(default=1)        #Status :1 Valid /2 discontinued /9 deleted
     create_at = models.DateTimeField(default=datetime.now)    #Adding time
     update_at = models.DateTimeField(default=datetime.now)    #Update time
+
+    def __str__(self) -> str:
+        return self.name
 
     class Meta:
         db_table = "category"  # change the name of the table
@@ -41,7 +46,10 @@ class Product(models.Model):
     status = models.IntegerField(default=1)        #Status :1 Valid /2 discontinued /9 deleted
     create_at = models.DateTimeField(default=datetime.now)    #Adding time
     update_at = models.DateTimeField(default=datetime.now)    #Update time
-
+    
+    def __str__(self) -> str:
+        return self.name
+    
     def toDict(self):
         return {'id':self.id,'shop_id':self.shop_id,'category_id':self.category_id,'cover_pic':self.cover_pic,'name':self.name,'price':self.price,'status':self.status,'create_at':self.create_at.strftime('%Y-%m-%d %H:%M:%S'),'update_at':self.update_at.strftime('%Y-%m-%d %H:%M:%S')}
 
@@ -61,6 +69,9 @@ class Orders(models.Model):
     create_at = models.DateTimeField(default=datetime.now)  #creation time
     update_at = models.DateTimeField(default=datetime.now)  #modification time
 
+    def __str__(self) -> str:
+        return self.name
+    
     class Meta:
         db_table = "orders"  # change the name of the table
 
@@ -73,6 +84,9 @@ class OrderDetail(models.Model):
     price = models.FloatField()     #price
     quantity = models.IntegerField()  #capacity
     status = models.IntegerField(default=1) #Status :1 Normal /9 Deleted
+
+    def __str__(self) -> str:
+        return self.product_name
 
     class Meta:
         db_table = "order_detail"  # change the name of the table
