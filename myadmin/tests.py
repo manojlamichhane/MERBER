@@ -57,9 +57,5 @@ class test_views (TestCase):
         response = client.get(reverse('myadmin_login'))
         self.assertEqual(response.status_code,200)    
 
-    def test_myadmin_login(self):
-        client = Client()
-        response = client.get(reverse('myadmin_login'))
-        self.assertEqual(response.status_code,200)    
      
      
